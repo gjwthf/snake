@@ -1,0 +1,430 @@
+////////////////////////////////
+// Reset
+*,
+*::after,
+*::before {
+    margin: 0;
+    padding: 0;
+}
+
+////////////////////////////////
+// Basic styles
+body {
+    font-family: 'Press Start 2P', cursive;
+}
+
+button {
+    font-family: inherit;
+}
+
+////////////////////////////////
+// Title
+.title {
+    text-align: center;
+    font-size: 54px;
+    letter-spacing: 5px;
+
+    color: #fff;
+    text-shadow: 6px 6px 0 #0a7c00;
+
+    margin-top: 30px;
+}
+
+////////////////////////////////
+// Background
+body {
+    background-color: #002e1f;
+}
+
+////////////////////////////////
+// Menu
+.main-window {
+    background-color: rgba($color: #0a7c00, $alpha: 0.25);
+
+    width: 500px;
+    height: 400px;
+    margin: 200px auto 0;
+    border: 3px solid green;
+    border-radius: 20px;
+    
+    transition: all .5s linear;
+    position: relative;
+
+    .menu {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate3d(-50%, -50% , 0);
+
+        width: 100%;
+
+        .menu__title {
+            text-align: center;
+            color: #fff;
+        }
+
+        button {
+            display: block;
+            width: 100%;
+            max-width: 200px;
+            margin: 0 auto;
+
+            padding: 15px;
+            margin-top: 30px;
+
+            cursor: pointer;
+            transition: all .1s linear;
+            background-color: #fff;
+            border: 0;
+
+            &:hover {
+                background-color: #bebebe;
+            }
+
+            &:active {
+                background-color: #979797;
+            }
+        }
+    }
+}
+
+////////////////////////////////
+// paint
+
+//snake
+.painted--green {
+    background-image: url(../assets/skins/snake/green.png);
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position-x: center;
+}
+
+.painted--yellow {
+    background-image: url(../assets/skins/snake/yellow.png);
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position-x: center;
+}
+
+.painted--white {
+    background-image: url(../assets/skins/snake/white.png);
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position-x: center;
+}
+
+.painted--black {
+    background-image: url(../assets/skins/snake/black.png);
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position-x: center;
+}
+
+.painted--rubik {
+    background-image: url(../assets/skins/snake/rubik.png);
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position-x: center;
+}
+
+.painted--fiery {
+    background-image: url(../assets/skins/snake/fiery.png);
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position-x: center;
+}
+//head
+.painted--snake {
+    background-image: url(../assets/skins/head/snake.png);
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position-x: center;
+}
+
+.painted--gru {
+    background-image: url(../assets/skins/head/gru.png);
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position-x: center;
+}
+
+.painted--steve {
+    background-image: url(../assets/skins/head/steve.png);
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position-x: center;
+}
+
+.painted--junk {
+    background-image: url(../assets/skins/head/junk.png);
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position-x: center;
+}
+
+//food
+.painted--apple {
+    background-image: url(../assets/skins/food/apple.png);
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position-x: center;
+}
+
+.painted--penis {
+    background-image: url(../assets/skins/food/penis.png);
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position-x: center;
+}
+
+.painted--minion {
+    background-image: url(../assets/skins/food/minion.png);
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position-x: center;
+}
+
+.painted--burger {
+    background-image: url(../assets/skins/food/burger.png);
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position-x: center;
+}
+
+.painted--creeper {
+    background-image: url(../assets/skins/food/creeper.png);
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position-x: center;
+}
+
+.painted--marijuana {
+    background-image: url(../assets/skins/food/marijuana.png);
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position-x: center;
+}
+
+//boom
+.painted--boom {
+    background-image: url(../assets/game/boom.png);
+}
+
+////////////////////////////////
+// Win
+.winning__button {
+    display: block;
+    margin: 40px auto 0;
+    width: 100%;
+    max-width: 400px;
+    background-color: #fff;
+    border: 0;
+    height: 60px;
+    font-size: 42px;
+    cursor: pointer;
+    transition: all .1s linear;
+    margin-bottom: 20px;
+
+    &:hover {
+        background-color: #bebebe;
+    }
+
+    &:active {
+        background-color: #979797;
+    }
+}
+
+.winning__title {
+    text-align: center;
+    font-size: 54px;
+    letter-spacing: 5px;
+
+    color: #fff;
+    text-shadow: 6px 6px 0 #0a7c00;
+
+    margin-top: 30px;
+}
+
+////////////////////////////////
+// Pause
+.menu-pause {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate3d(-50%, -50% , 0);
+    background-color: #fff;
+    border: 0;
+    width: 400px;
+    height: 60px;
+    font-size: 42px;
+    cursor: pointer;
+    transition: all .1s linear;
+
+    &:hover {
+        background-color: #bebebe !important;
+    }
+}
+
+////////////////////////////////
+// Restart button
+.losing {
+    .losing__title {
+        text-align: center;
+        margin: 80px 0;
+        font-size: 200px;
+        overflow: hidden;
+        color: #fff;
+        text-shadow: 16px 16px 0px #000000;
+    }
+
+    .losing__restart, .losing__menu {
+        display: block;
+        margin: 0 auto;
+        width: 100%;
+        max-width: 400px;
+        background-color: #fff;
+        border: 0;
+        height: 60px;
+        font-size: 42px;
+        cursor: pointer;
+        transition: all .1s linear;
+        margin-bottom: 20px;
+
+        &:hover {
+            background-color: #bebebe;
+        }
+
+        &:active {
+            background-color: #979797;
+        }
+    }
+}
+
+////////////////////////////////
+// themes
+.themes {
+    width: 100%;
+    height: 100%;
+
+    .themes__inner {
+        box-sizing: border-box;
+        width: 100%;
+        height: auto;
+
+        display: flex;
+        flex-wrap: wrap;
+        row-gap: 30px;
+        justify-content: center;
+        padding-top: 50px;
+
+        .themes__item {
+            width: 50%;
+
+            img {
+                display: block;
+                width: 100%;
+                margin: 0 auto;
+                width: 200px;
+                height: 200px;
+            }
+
+            .themes__item-button {
+                box-sizing: content-box;
+                display: block;
+                width: 100%;
+                margin: 0 auto;
+                max-width: 30px;
+                height: 30px;
+                margin-top: 20px;
+                border-radius: 50%;
+                background-color: transparent;
+                border: 3px solid #fff;
+                cursor: pointer;
+            }
+
+            [activated="true"] {
+                background-image: url(../assets/themes/white-circle.png);
+                background-repeat: no-repeat;
+                background-size: cover;
+                cursor: auto;
+            }
+        }
+    }
+
+    .themes__back {
+        display: block;
+        margin: 30px auto 0;
+        width: 100%;
+        max-width: 300px;
+        background-color: #fff;
+        border: 0;
+        height: 40px;
+        font-size: 36px;
+        cursor: pointer;
+        transition: all .1s linear;
+
+        &:hover {
+            background-color: #bebebe;
+        }
+
+        &:active {
+            background-color: #979797;
+        }
+    }
+}
+
+////////////////////////////////
+// skins
+.skins {
+    width: 100%;
+    height: 100%;
+
+    .skins__inner {
+        display: flex;
+        justify-content: center;
+        column-gap: 40px;
+        margin-top: 40px;
+
+        .skins__button {
+            box-sizing: content-box;
+            display: block;
+            width: 100%;
+            margin: 0 auto;
+            max-width: 30px;
+            height: 30px;
+            margin-top: 20px;
+            border-radius: 50%;
+            background-color: transparent;
+            border: 3px solid #fff;
+            cursor: pointer;
+        }
+
+        [activated="true"] {
+            background-image: url(../assets/themes/white-circle.png);
+            background-repeat: no-repeat;
+            background-size: cover;
+            cursor: auto;
+        }
+    }
+
+    .skins__back {
+        display: block;
+        margin: 60px auto 0;
+        width: 100%;
+        max-width: 300px;
+        background-color: #fff;
+        border: 0;
+        height: 40px;
+        font-size: 36px;
+        cursor: pointer;
+        transition: all .1s linear;
+
+        &:hover {
+            background-color: #bebebe;
+        }
+
+        &:active {
+            background-color: #979797;
+        }
+    }
+}

@@ -1,0 +1,217 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./css/style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap"  rel="stylesheet">
+    <title>Snake game</title>
+    <script src="main.js" defer></script>
+</head>
+<body>
+    <!-- Title -->
+    <h1 class="title">snake</h1>
+    <!-- Main window -->
+    <div class="main-window">
+
+        <!-- Menu -->
+        <div class="menu">
+            <h2 class="menu__title">menu</h2>
+            <button class="menu__start">start</button>
+            <button class="menu__themes">themes</button>
+            <button class="menu__skins">skins</button>
+            <button class="menu__test">iq test</button>
+        </div>
+
+        <!-- Game -->
+        <div class="game">
+            
+        </div>
+
+        <!-- Themes -->
+        <div class="themes" hidden>
+            <div class="themes__inner">
+                <div class="themes__item">
+                    <img src="./assets/themes/green.png" alt="" 
+                    style="width: 300px; height: 225px; 
+                    border: 3px solid green;
+                    border-radius: 10px;">
+                    <button class="themes__item-button" 
+                    color="green" activated="true"></button>
+                </div>
+                <div class="themes__item">
+                    <img src="./assets/themes/blue.png" alt="" 
+                    style="width: 300px; height: 225px; 
+                    border: 3px solid green;
+                    border-radius: 10px;">
+                    <button class="themes__item-button"
+                    color="blue" activated="false"></button>
+                </div>
+                <div class="themes__item">
+                    <img src="./assets//themes/white.png" alt="" 
+                    style="width: 300px; height: 225px; 
+                    border: 3px solid green;
+                    border-radius: 10px;">
+                    <button class="themes__item-button"
+                    color="white" activated="false"></button>
+                </div>
+                <div class="themes__item">
+                    <img src="./assets//themes/black.png" alt="" 
+                    style="width: 300px; height: 225px; 
+                    border: 3px solid green;
+                    border-radius: 10px;">
+                    <button class="themes__item-button"
+                    color="black" activated="false"></button>
+                </div>
+            </div>
+            <button class="themes__back">back</button>
+        </div>
+
+        <!-- Skins -->
+        <div class="skins" hidden>
+            <!-- Snake -->
+            <div class="skins__inner">
+                <div class="skins__item">
+                    <img src="./assets/skins/snake/green.png" alt="" 
+                    style="width: 100px; height: 100px; 
+                    border: 3px solid green; border-radius: 10px;">
+                    <button class="skins__button"
+                    activated="true" snake="green"></button>
+                </div>
+                <div class="skins__item">
+                    <img src="./assets/skins/snake/yellow.png" alt="" 
+                    style="width: 100px; height: 100px;
+                    border: 3px solid green; border-radius: 10px;">
+                    <button class="skins__button"
+                    activated="false" snake="yellow"></button>
+                </div>
+                <div class="skins__item">
+                    <img src="./assets/skins/snake/white.png" alt="" 
+                    style="width: 100px; height: 100px;
+                    border: 3px solid green; border-radius: 10px;">
+                    <button class="skins__button"
+                    activated="false" snake="white"></button>
+                </div>
+                <div class="skins__item">
+                    <img src="./assets/skins/snake/black.png" alt="" 
+                    style="width: 100px; height: 100px;
+                    border: 3px solid green; border-radius: 10px;">
+                    <button class="skins__button"
+                    activated="false" snake="black"></button>
+                </div>
+                <div class="skins__item">
+                    <img src="./assets/skins/snake/fiery.png" alt="" 
+                    style="width: 100px; height: 100px;
+                    border: 3px solid green; border-radius: 10px;">
+                    <button class="skins__button"
+                    activated="false" snake="fiery"></button>
+                </div>
+                <div class="skins__item">
+                    <img src="./assets/skins/snake/rubik.png" alt="" 
+                    style="width: 100px; height: 100px;
+                    border: 3px solid green; border-radius: 10px;">
+                    <button class="skins__button"
+                    activated="false" snake="rubik"></button>
+                </div>
+            </div>
+            <!-- Head -->
+            <div class="skins__inner">
+                <div class="skins__item">
+                    <img src="./assets/skins/head/snake.png" alt="" 
+                    style="width: 100px; height: 100px;
+                    border: 3px solid green; border-radius: 10px;">
+                    <button class="skins__button"
+                    activated="true" head="snake"></button>
+                </div>
+                <div class="skins__item">
+                    <img src="./assets/skins/head/gru.png" alt="" 
+                    style="width: 100px; height: 100px;
+                    border: 3px solid green; border-radius: 10px;">
+                    <button class="skins__button"
+                    activated="false" head="gru"></button>
+                </div>
+                <div class="skins__item">
+                    <img src="./assets/skins/head/steve.png" alt="" 
+                    style="width: 100px; height: 100px;
+                    border: 3px solid green; border-radius: 10px;">
+                    <button class="skins__button"
+                    activated="false" head="steve"></button>
+                </div>
+                <div class="skins__item">
+                    <img src="./assets/skins/head/junk.png" alt="" 
+                    style="width: 100px; height: 100px;
+                    border: 3px solid green; border-radius: 10px;">
+                    <button class="skins__button"
+                    activated="false" head="junk"></button>
+                </div>
+            </div>
+            <!-- Food -->
+            <div class="skins__inner">
+                <div class="skins__item">
+                    <img src="./assets/skins/food/apple.png" alt="" 
+                    style="width: 100px; height: 100px;
+                    border: 3px solid green; border-radius: 10px;">
+                    <button class="skins__button"
+                    activated="true" food="apple"></button>
+                </div>
+                <div class="skins__item">
+                    <img src="./assets/skins/food/penis.png" alt="" 
+                    style="width: 100px; height: 100px;
+                    border: 3px solid green; border-radius: 10px;">
+                    <button class="skins__button"
+                    activated="false" food="penis"></button>
+                </div>
+                <div class="skins__item">
+                    <img src="./assets/skins/food/minion.png" alt="" 
+                    style="width: 100px; height: 100px;
+                    border: 3px solid green; border-radius: 10px;">
+                    <button class="skins__button"
+                    activated="false" food="minion"></button>
+                </div>
+                <div class="skins__item">
+                    <img src="./assets/skins/food/burger.png" alt="" 
+                    style="width: 100px; height: 100px;
+                    border: 3px solid green; border-radius: 10px;">
+                    <button class="skins__button"
+                    activated="false" food="burger"></button>
+                </div>
+                <div class="skins__item">
+                    <img src="./assets/skins/food/creeper.png" alt="" 
+                    style="width: 100px; height: 100px;
+                    border: 3px solid green; border-radius: 10px;">
+                    <button class="skins__button"
+                    activated="false" food="creeper"></button>
+                </div>
+                <div class="skins__item">
+                    <img src="./assets/skins/food/marijuana.png" alt="" 
+                    style="width: 100px; height: 100px;
+                    border: 3px solid green; border-radius: 10px;">
+                    <button class="skins__button"
+                    activated="false" food="marijuana"></button>
+                </div>
+            </div>
+            <button class="skins__back">back</button>
+        </div>
+
+        <!-- Losing window -->
+        <div class="losing" hidden>
+            <h2 class="losing__title">GAME OVER</h2>
+            <button class="losing__restart">restart</button>
+            <button class="losing__menu">menu</button>
+        </div>
+
+        <!-- Winning window -->
+        <div class="winning" hidden style="opacity: 0; 
+        transition: all 1.5s linear;">
+            <h1 class="winning__title" style="margin-top: 80px;">
+                Ты ебанутый?
+            </h1>
+            <img src="./assets/win/polo.jpg" style="display: block; width: 100%; height: 400px; max-width: 90px; margin: 80px auto 0;">
+            <button class="winning__button">да</button>
+        </div>
+
+    </div>
+</body>
+</html>
